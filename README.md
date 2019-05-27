@@ -1,0 +1,3 @@
+# prakeiksmai
+## Lithuanian swearword generator
+
