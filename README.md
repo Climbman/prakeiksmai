@@ -1,3 +1,3 @@
 # prakeiksmai
-## Lithuanian swearword generator
+## Lithuanian insult generator
 

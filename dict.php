@@ -15,6 +15,8 @@ $_DICT2 = [
 $_DICT3 = [
     "tinginy",
     "žiurke",
-    "smirdaliau"
+    "smirdaliau",
+    "durniau",
+    "gaidy"
     ];
 ?>
