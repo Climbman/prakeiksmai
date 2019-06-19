@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo mkdir -p /tmp/prakeiksmai
+sudo mkdir -p /var/www/html/prakeiksmai
 sudo rm -r /tmp/prakeiksmai/*
 sudo cp -r /var/www/html/prakeiksmai/* /tmp/prakeiksmai/
 sudo rm -r /var/www/html/prakeiksmai/*

@@ -43,5 +43,12 @@ function clback(json_txt) {
         return false;
     }
     text = getInsult(json_obj.combination);
-    document.getElementById("vieta").innerHTML = text;
+    document.getElementById("word_container").value = text;
+}
+
+function copyText(elem) {
+    elem.select();
+    document.execCommand("copy");
+    elem.blur();
+    alert("Copied the text: " + elem.value);
 }
