@@ -1,3 +1,6 @@
+var audio = new Audio("shotgun-mossberg590-RA_The_Sun_God-451502290.mp3")
+audio.volume = 0.1;
+
 function getWords(clback) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -50,5 +53,12 @@ function copyText(elem) {
     elem.select();
     document.execCommand("copy");
     elem.blur();
-    alert("Copied the text: " + elem.value);
+    message_box.innerHTML = "Tekstas nukopijuotas į talpyklą";
+    message_box.style.opacity = 1.0;
+    setTimeout(function(){message_box.style.opacity = 0.0;}, 2000);
+}
+
+function playSound(audio) {
+    audio.play();
+    
 }

@@ -1,6 +1,12 @@
+body {
+    margin: 0px;
+    background-color: #eeeeee;
+}
+
 .content_holder {
     max-width: 1000px;
-    width: 80%;
+    width: 95%;
+    height: 100vh;
     margin: auto;
     background-color: lightgray;
 }
@@ -17,34 +23,93 @@
 #main_form {
     width: 80%;
     margin: auto;
-    height: 400px
+    height: 350px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
 
 #word_changer {
     height: 50px;
     width: 150px;
+    padding-top: 10px;
     margin: auto;
     background-color: cyan;
     text-align: center;
+    font-family: 'Ewert';
+    cursor: pointer;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+}
+
+#copy_button {
+    height: 50px;
+    width: 150px;
+    padding-top: 10px;
+    margin: auto;
+    background-color: cyan;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5em;
     border: none;
     border-radius: 10px;
 }
 
 #word_changer:hover {
     opacity: 50%;
+    background-color: red;
 }
 
 #word_container {
     background-color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-style: italic;
+    font-size: 2em;
     border: 2px solid black;
     border-radius: 10px;
     text-align: center;
-    height: 30px;
+    height: 150px;
+    width: 270px;
     margin: auto;
     display: block;
+    overflow: hidden;
+}
+
+#message_box {
+    background-color: #ffffff;
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    opacity: 0.0;
+    transition: opacity 1s;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    z-index: 99;
+}
+
+.border_box {
+    box-sizing: border-box;
 }
 
 .separator {
     width: 100%;
-    heght: 20px;
+    height: 20px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; /
+}
+
+.dontdisplay {
+    display: none;
 }
