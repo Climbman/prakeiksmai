@@ -21,13 +21,21 @@
     <div id="message_box"></div>
     <div class="separator"></div>
     <div class="separator"></div>
-    <div id="main_form">
+    <div id="main_form" class="border_box" >
         <div class="separator"></div>
-        <textarea id="word_container" class="border_box" onclick=""></textarea>
+        <textarea id="main_word_container" class="border_box word_container noselect" readonly></textarea>
         <div class="separator"></div>
         <div id="word_changer" class="border_box noselect" onclick="getWords(clback);playSound(audio);">Keiktis</div>
         <div class="separator"></div>
-        <div id="copy_button" class="border_box noselect" onclick="copyText(word_container);">CopyPasta</div>
+        <div id="copy_button" class="border_box noselect" onclick="copyText(main_word_container);">CopyPasta</div>
+    </div>
+    <div class="separator"></div>
+    <div id="ctrl_form" class="border_box">
+		<div>
+			<textarea id="save_word_container" class="word_container border_box"></textarea>
+		</div>
+		<div></div>
+		<div></div>
     </div>
 </div>
 

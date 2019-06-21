@@ -46,7 +46,7 @@ function clback(json_txt) {
         return false;
     }
     text = getInsult(json_obj.combination);
-    document.getElementById("word_container").value = text;
+    document.getElementById("main_word_container").value = text;
 }
 
 function copyText(elem) {

@@ -1,14 +1,15 @@
 body {
     margin: 0px;
+    background-image: url("prefabricated-buildings-1570607_1920.jpg");
     background-color: #eeeeee;
 }
 
 .content_holder {
     max-width: 1000px;
-    width: 95%;
+    width: 90%;
     height: 100vh;
     margin: auto;
-    background-color: lightgray;
+    background-color: rgba(200, 200, 200, 0.7);
 }
 
 .page_header {
@@ -20,11 +21,16 @@ body {
     margin: 0px;
 }
 
-#main_form {
+#main_form, #ctrl_form {
     width: 80%;
     margin: auto;
     height: 350px;
+    background-color: lightgray;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+#ctrl_form {
+	padding: 10px;
 }
 
 #word_changer {
@@ -59,19 +65,29 @@ body {
     background-color: red;
 }
 
-#word_container {
-    background-color: white;
+.word_container {
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	display: block;
+}
+
+#main_word_container {
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-style: italic;
     font-size: 2em;
-    border: 2px solid black;
-    border-radius: 10px;
     text-align: center;
-    height: 150px;
-    width: 270px;
     margin: auto;
-    display: block;
     overflow: hidden;
+    height: 150px;
+	width: 270px;
+	cursor: default;
+}
+
+#save_word_container {
+	height: 150px;
+	width: 270px;
+	margin: auto;
 }
 
 #message_box {
@@ -108,6 +124,13 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; /
+}
+
+.noselect::selection {
+	background: #ffffff;
+}
+.noselect::-moz-selection {
+	background: #ffffff;
 }
 
 .dontdisplay {
