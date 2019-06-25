@@ -25,6 +25,7 @@ body {
     width: 80%;
     margin: auto;
     height: 350px;
+    max-width: 450px;
     background-color: lightgray;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
@@ -47,6 +48,11 @@ body {
     border-radius: 10px;
 }
 
+#word_changer:hover {
+    opacity: 50%;
+    background-color: red;
+}
+
 #copy_button {
     height: 50px;
     width: 150px;
@@ -60,10 +66,6 @@ body {
     border-radius: 10px;
 }
 
-#word_changer:hover {
-    opacity: 50%;
-    background-color: red;
-}
 
 .word_container {
 	background-color: white;
@@ -86,8 +88,16 @@ body {
 
 #save_word_container {
 	height: 150px;
-	width: 270px;
-	margin: auto;
+	width: 25%;
+	display: inline-block;
+	float: left;
+}
+
+#controls {
+	display: inline-block;
+	height: 150px;
+	width: 75%;
+	float: left;
 }
 
 #message_box {
@@ -123,7 +133,7 @@ body {
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; /
+    user-select: none;
 }
 
 .noselect::selection {

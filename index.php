@@ -31,11 +31,6 @@
     </div>
     <div class="separator"></div>
     <div id="ctrl_form" class="border_box">
-		<div>
-			<textarea id="save_word_container" class="word_container border_box"></textarea>
-		</div>
-		<div></div>
-		<div></div>
     </div>
 </div>
 
