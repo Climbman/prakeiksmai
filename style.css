@@ -5,11 +5,13 @@ body {
 }
 
 .content_holder {
-    max-width: 1000px;
+    max-width: 500px;
     width: 90%;
-    height: 100vh;
+    height: auto;
     margin: auto;
-    background-color: rgba(200, 200, 200, 0.7);
+    margin-top: 20px;
+    padding: 40px 0px;
+    background-color: rgba(255, 0, 0, 0.8);
 }
 
 .page_header {
@@ -21,31 +23,36 @@ body {
     margin: 0px;
 }
 
-#main_form, #ctrl_form {
+.form {
     width: 80%;
     margin: auto;
     height: 350px;
     max-width: 450px;
-    background-color: lightgray;
+    background-color: rgb(245, 235, 203);
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
 
 #ctrl_form {
 	padding: 10px;
+	height: 150px;
+}
+
+.main_button {
+    height: 50px;
+    width: 90%;
+    max-width: 150px;
+    padding-top: 10px;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
 }
 
 #word_changer {
-    height: 50px;
-    width: 150px;
-    padding-top: 10px;
-    margin: auto;
-    background-color: cyan;
-    text-align: center;
     font-family: 'Ewert';
-    cursor: pointer;
     font-size: 1.5em;
-    border: none;
-    border-radius: 10px;
+    border: 1px black solid;
 }
 
 #word_changer:hover {
@@ -54,18 +61,14 @@ body {
 }
 
 #copy_button {
-    height: 50px;
-    width: 150px;
-    padding-top: 10px;
-    margin: auto;
-    background-color: cyan;
-    text-align: center;
-    cursor: pointer;
     font-size: 1.5em;
-    border: none;
-    border-radius: 10px;
+    border: 1px black solid;
 }
 
+#mute_button {
+    font-size: 1.5em;
+    border: 1px black solid;
+}
 
 .word_container {
 	background-color: white;
@@ -82,7 +85,8 @@ body {
     margin: auto;
     overflow: hidden;
     height: 150px;
-	width: 270px;
+	width: 98%;
+	max-width: 300px;
 	cursor: default;
 }
 
@@ -116,6 +120,11 @@ body {
     border: none;
     border-radius: 5px;
     z-index: 99;
+}
+
+#footer {
+	height: 50px;
+	text-align: center;
 }
 
 .border_box {

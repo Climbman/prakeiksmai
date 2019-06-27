@@ -60,5 +60,16 @@ function copyText(elem) {
 
 function playSound(audio) {
     audio.play();
-    
 }
+
+function mute(element) {
+    if (element.innerHTML == 'Tyliai') {
+        element.innerHTML = 'Garsiai';
+        audio.volume = 0.0;
+    } else {
+        element.innerHTML = 'Tyliai';
+        audio.volume = 0.1;
+    }
+}
+        
+    
