@@ -1,3 +1,5 @@
+var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+
 var audio = new Audio("shotgun-mossberg590-RA_The_Sun_God-451502290.mp3")
 audio.volume = 0.1;
 
@@ -71,5 +73,11 @@ function mute(element) {
         audio.volume = 0.1;
     }
 }
-        
+
+function oclk(elem) {
+	if (isTouch) {
+		elem.style.backgroundColor = "red";
+		setTimeout(function(){elem.style.backgroundColor = "#ffffff";}, 200);
+	}
+}
     

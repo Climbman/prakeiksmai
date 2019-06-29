@@ -12,6 +12,7 @@ body {
     margin-top: 20px;
     padding: 40px 0px;
     background-color: rgba(255, 0, 0, 0.8);
+    border-radius: 10px;
 }
 
 .page_header {
@@ -47,17 +48,18 @@ body {
     cursor: pointer;
     background-color: white;
     border-radius: 10px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.main_button:hover {
+    opacity: 50%;
+    background-color: red;
 }
 
 #word_changer {
     font-family: 'Ewert';
     font-size: 1.5em;
     border: 1px black solid;
-}
-
-#word_changer:hover {
-    opacity: 50%;
-    background-color: red;
 }
 
 #copy_button {
