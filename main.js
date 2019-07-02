@@ -42,7 +42,7 @@ function getInsult(combination) {
 }
 
 function clback(json_txt) {
-    console.log(json_txt);
+    //console.log(json_txt);
     json_obj = JSON.parse(json_txt);
     if (!checkObj(json_obj)) {
         return false;
@@ -67,10 +67,10 @@ function playSound(audio) {
 function mute(element) {
     if (element.innerHTML == 'Tyliai') {
         element.innerHTML = 'Garsiai';
-        audio.volume = 0.0;
+        audio.muted = true;
     } else {
         element.innerHTML = 'Tyliai';
-        audio.volume = 0.1;
+        audio.muted = false;
     }
 }
 

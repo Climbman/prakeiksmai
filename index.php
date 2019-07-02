@@ -25,12 +25,12 @@
         <div class="separator"></div>
         <div id="word_changer" class="main_button border_box noselect" onclick="getWords(clback);playSound(audio); oclk(this);">Keiktis</div>
         <div class="separator"></div>
-        <div id="copy_button" class="main_button border_box noselect" onclick="copyText(main_word_container);">CopyPasta</div>
+        <div id="copy_button" class="main_button border_box noselect" onclick="copyText(main_word_container); oclk(this);">CopyPasta</div>
     </div>
     <div class="separator"></div>
     <div id="ctrl_form" class="form border_box">
 		<div class="separator"></div>
-		<div id="mute_button" class="main_button border_box noselect" onclick="mute(this);">Tyliai</div>
+		<div id="mute_button" class="main_button border_box noselect" onclick="mute(this); oclk(this);">Tyliai</div>
 		
     </div>
     <div class="separator"></div>
