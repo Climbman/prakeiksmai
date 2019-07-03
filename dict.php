@@ -2,7 +2,7 @@
 
 $_DICT1 = [
     "kramtyk",
-    "bučiuok",
+    "pabučiuok",
     "nulupk",
     "paglostyk",
     "remontuok",
@@ -12,7 +12,7 @@ $_DICT1 = [
     "pašnekink",
     "išvirk",
     "iškepk",
-    "skrudink",
+    "paskrudink",
     "paguosk",
     "susuk",
     "pašildyk",
@@ -22,7 +22,6 @@ $_DICT1 = [
     "pašokdink",
     "nušveisk",
     "nuplauk",
-    "mylėk",
     "pagirk",
     "pamylėk",
     "nuryk",
@@ -37,8 +36,6 @@ $_DICT1 = [
     "atryk",
     "išvemk",
     "pasimatuok",
-    "pakerėk",
-    "nustebink",
     "apdainuok",
     "rūkyk",
     "pagauk",
@@ -48,7 +45,6 @@ $_DICT1 = [
     "padžiauk",
     "užtrenk",
     "išplak",
-    "išgelbėk",
     "nušvilpk",
     "ištiesink",
     "nugramdyk",
@@ -62,7 +58,10 @@ $_DICT1 = [
     "išblizgink",
     "nupoliruok",
     "pataisyk",
-    "nusipirk"
+    "nusipirk",
+    "iškosėk",
+    "kirsk",
+    "išspjauk"
     ];
     
 $_DICT2 = [
@@ -153,7 +152,9 @@ $_DICT2 = [
     "fašistą",
     "langą",
     "duris",
-    "rastą"
+    "rastą",
+    "befstrogeną",
+    "naktipuodį"
     ];
     
 $_DICT3 = [

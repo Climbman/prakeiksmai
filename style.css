@@ -35,7 +35,7 @@ body {
 
 #ctrl_form {
 	padding: 10px;
-	height: 150px;
+	height: 110px;
 }
 
 .main_button {
@@ -59,7 +59,7 @@ body {
 #word_changer {
     font-family: 'Ewert';
     font-size: 1.5em;
-    border: 1px black solid;
+    border: 2px black solid;
 }
 
 #copy_button {
@@ -74,7 +74,7 @@ body {
 
 .word_container {
 	background-color: white;
-	border: 2px solid black;
+	border: 1px solid black;
 	border-radius: 10px;
 	display: block;
 }
@@ -90,6 +90,7 @@ body {
 	width: 98%;
 	max-width: 300px;
 	cursor: default;
+	background-color: cyan;
 }
 
 #save_word_container {
@@ -127,6 +128,18 @@ body {
 #footer {
 	height: 50px;
 	text-align: center;
+}
+
+#gith {
+	display: block;
+	text-decoration: none;
+	color: #000000;
+	padding-top: 15px;
+}
+
+#gith:hover {
+	text-decoration: underline;
+	background-color: rgb(245, 235, 203);
 }
 
 .border_box {

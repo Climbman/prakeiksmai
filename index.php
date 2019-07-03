@@ -35,7 +35,8 @@
     </div>
     <div class="separator"></div>
     <div id="footer" class="form border_box">
-		<div id="contacts">GitHub:</div>
+		<div id="contacts">
+		<a id="gith" href="https://github.com/Climbman/prakeiksmai">GitHub</a></div>
     </div>
 </div>
 
