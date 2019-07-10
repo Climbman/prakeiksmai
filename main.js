@@ -1,7 +1,17 @@
 var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
 
-var audio = new Audio("shotgun-mossberg590-RA_The_Sun_God-451502290.mp3")
-audio.volume = 0.1;
+var a_dir = "sounds/";
+var a_files = ["1", "2", "3", "4"];
+var a_objects = [];
+var a_vol = 0.1;
+var a_is_muted = false;
+for (var file of a_files) {
+	a_obj = new Audio(a_dir + file + ".mp3");
+	a_obj.volume = a_vol;
+	a_objects.push(a_obj);
+}
+
+
 
 function getWords(clback) {
     var xhttp = new XMLHttpRequest();
@@ -60,17 +70,21 @@ function copyText(elem) {
     setTimeout(function(){message_box.style.opacity = 0.0;}, 2000);
 }
 
-function playSound(audio) {
-    audio.play();
+function playSound(a_objects, a_is_muted) {
+	if (!a_is_muted) {
+		var rand = Math.floor(Math.random() * a_objects.length);
+		console.log(rand);
+		a_objects[rand].play();
+	}
 }
 
 function mute(element) {
     if (element.innerHTML == 'Tyliai') {
         element.innerHTML = 'Garsiai';
-        audio.muted = true;
+        a_is_muted = true;
     } else {
         element.innerHTML = 'Tyliai';
-        audio.muted = false;
+        a_is_muted = false;
     }
 }
 

@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -23,7 +21,7 @@
         <div class="separator"></div>
         <textarea id="main_word_container" class="border_box word_container noselect" readonly></textarea>
         <div class="separator"></div>
-        <div id="word_changer" class="main_button border_box noselect" onclick="getWords(clback);playSound(audio); oclk(this);">Keiktis</div>
+        <div id="word_changer" class="main_button border_box noselect" onclick="getWords(clback);playSound(a_objects, a_is_muted); oclk(this);">Keiktis</div>
         <div class="separator"></div>
         <div id="copy_button" class="main_button border_box noselect" onclick="copyText(main_word_container); oclk(this);">CopyPasta</div>
     </div>
