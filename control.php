@@ -15,8 +15,6 @@ switch ($_GET["command"]) {
         $response_json = json_encode($obj);
         echo $response_json;
         break;
-        
-        
     default:
         echo null;
         break;

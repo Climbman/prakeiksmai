@@ -6,18 +6,43 @@ var a_objects = [];
 var a_vol = 0.1;
 var a_is_muted = false;
 for (var file of a_files) {
-	a_obj = new Audio(a_dir + file + ".mp3");
-	a_obj.volume = a_vol;
-	a_objects.push(a_obj);
+    a_obj = new Audio(a_dir + file + ".mp3");
+    a_obj.volume = a_vol;
+    a_objects.push(a_obj);
 }
 
+window.onload = function() {
+    document.getElementById("content").addEventListener("click", handleClick);
+}
 
+function handleClick() {
+    switch (event.target.id) {
+        case "word_changer":
+            getWords();
+            playSound(a_objects, a_is_muted);
+            clickEffect(event.target);
+            break;
+        case "copy_button":
+            copyText(main_word_container);
+            clickEffect(event.target);
+            break;
+        case "mute_button":
+            mute(event.target);
+            clickEffect(event.target);
+            break;
+    }
+}
 
-function getWords(clback) {
+function getWords() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            clback(this.responseText);
+            json_obj = JSON.parse(this.responseText);
+            if (!checkObj(json_obj)) {
+                return false;
+            }
+            text = getInsult(json_obj.combination);
+            document.getElementById("main_word_container").value = text;
         }
     };
     xhttp.open("GET", "control.php?command=1", true);
@@ -51,31 +76,21 @@ function getInsult(combination) {
     return insult;
 }
 
-function clback(json_txt) {
-    //console.log(json_txt);
-    json_obj = JSON.parse(json_txt);
-    if (!checkObj(json_obj)) {
-        return false;
-    }
-    text = getInsult(json_obj.combination);
-    document.getElementById("main_word_container").value = text;
-}
 
 function copyText(elem) {
     elem.select();
     document.execCommand("copy");
     elem.blur();
-    message_box.innerHTML = "Tekstas nukopijuotas į talpyklą";
+    message_box.innerHTML = "Tekstas clipboard'e";
     message_box.style.opacity = 1.0;
     setTimeout(function(){message_box.style.opacity = 0.0;}, 2000);
 }
 
 function playSound(a_objects, a_is_muted) {
-	if (!a_is_muted) {
-		var rand = Math.floor(Math.random() * a_objects.length);
-		console.log(rand);
-		a_objects[rand].play();
-	}
+    if (!a_is_muted) {
+        var rand = Math.floor(Math.random() * a_objects.length);
+        a_objects[rand].play();
+    }
 }
 
 function mute(element) {
@@ -88,10 +103,10 @@ function mute(element) {
     }
 }
 
-function oclk(elem) {
-	if (isTouch) {
-		elem.style.backgroundColor = "red";
-		setTimeout(function(){elem.style.backgroundColor = "#ffffff";}, 200);
-	}
+function clickEffect(elem) {
+    if (isTouch) {
+        elem.style.backgroundColor = "red";
+        setTimeout(function(){elem.style.backgroundColor = "#ffffff";}, 200);
+    }
 }
     
