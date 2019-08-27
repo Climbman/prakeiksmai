@@ -34,8 +34,8 @@ body {
 }
 
 #ctrl_form {
-	padding: 10px;
-	height: 110px;
+    padding: 10px;
+    height: 110px;
 }
 
 .main_button {
@@ -57,7 +57,7 @@ body {
 }
 
 #word_changer {
-    font-family: 'Ewert';
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     font-size: 1.5em;
     border: 2px black solid;
 }
@@ -73,10 +73,10 @@ body {
 }
 
 .word_container {
-	background-color: white;
-	border: 1px solid black;
-	border-radius: 10px;
-	display: block;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: block;
 }
 
 #main_word_container {
@@ -87,24 +87,24 @@ body {
     margin: auto;
     overflow: hidden;
     height: 150px;
-	width: 98%;
-	max-width: 300px;
-	cursor: default;
-	background-color: cyan;
+    width: 98%;
+    max-width: 300px;
+    cursor: default;
+    background-color: cyan;
 }
 
 #save_word_container {
-	height: 150px;
-	width: 25%;
-	display: inline-block;
-	float: left;
+    height: 150px;
+    width: 25%;
+    display: inline-block;
+    float: left;
 }
 
 #controls {
-	display: inline-block;
-	height: 150px;
-	width: 75%;
-	float: left;
+    display: inline-block;
+    height: 150px;
+    width: 75%;
+    float: left;
 }
 
 #message_box {
@@ -126,20 +126,20 @@ body {
 }
 
 #footer {
-	height: 50px;
-	text-align: center;
+    height: 50px;
+    text-align: center;
 }
 
 #gith {
-	display: block;
-	text-decoration: none;
-	color: #000000;
-	padding-top: 15px;
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    padding-top: 15px;
 }
 
 #gith:hover {
-	text-decoration: underline;
-	background-color: rgb(245, 235, 203);
+    text-decoration: underline;
+    background-color: rgb(245, 235, 203);
 }
 
 .border_box {
@@ -161,10 +161,10 @@ body {
 }
 
 .noselect::selection {
-	background: #ffffff;
+    background: #ffffff;
 }
 .noselect::-moz-selection {
-	background: #ffffff;
+    background: #ffffff;
 }
 
 .dontdisplay {
