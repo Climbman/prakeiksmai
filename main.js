@@ -34,46 +34,17 @@ function handleClick() {
 }
 
 function getWords() {
+    var obj;
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            json_obj = JSON.parse(this.responseText);
-            if (!checkObj(json_obj)) {
-                return false;
-            }
-            text = getInsult(json_obj.combination);
-            document.getElementById("main_word_container").value = text;
+            obj = JSON.parse(this.responseText);
+
+            document.getElementById("main_word_container").value = obj.phrase;
         }
     };
     xhttp.open("GET", "control.php?command=1", true);
     xhttp.send();
-}
-
-function checkObj(obj) {
-    if (obj.phrase != "OK") {
-        return false;
-    }
-    
-    if (obj.length < 10) {
-        return false;
-    }
-    
-    if (!obj.combination) {
-        return false;
-    }
-    
-    return true;
-}
-
-function getInsult(combination) {
-    word_array = combination.split(",");
-    
-    if (word_array.length != 3) {
-        return false;
-    }
-    
-    insult = word_array[0] + " " + word_array[1] + ", " + word_array[2];
-    return insult;
 }
 
 
