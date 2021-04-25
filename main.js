@@ -34,17 +34,19 @@ function handleClick() {
 }
 
 function getWords() {
-    var obj;
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            obj = JSON.parse(this.responseText);
+    var index1, index2, index3;
+    var phrase;
 
-            document.getElementById("main_word_container").value = obj.phrase;
-        }
-    };
-    xhttp.open("GET", "control.php?command=1", true);
-    xhttp.send();
+    index1 = random(0, dict1.length - 1);
+    index2 = random(0, dict2.length - 1);
+    index3 = random(0, dict3.length - 1);
+
+    phrase = ''
+        + dict1[index1] + ' '
+        + dict2[index2] + ', '
+        + dict3[index3];
+
+    document.getElementById("main_word_container").value = phrase;
 }
 
 
@@ -79,5 +81,9 @@ function clickEffect(elem) {
         elem.style.backgroundColor = "red";
         setTimeout(function(){elem.style.backgroundColor = "#ffffff";}, 200);
     }
+}
+
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
 }
     
